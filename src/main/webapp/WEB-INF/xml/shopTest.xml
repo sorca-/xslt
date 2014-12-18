@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+    <category name="Monitor">
+        <subcategory name="LCD">
+            <product>
+                <producer>Samsung</producer>
+                <model>S15-22</model>
+                <dateOfIssue>01-12-2014</dateOfIssue>
+                <color>Black</color>
+                <price>155</price>
+                <inStock>true</inStock>
+            </product>
+            <product>
+                <producer>LG</producer>
+                <model>L55-223</model>
+                <dateOfIssue>12-12-2013</dateOfIssue>
+                <color>Black</color>
+                <price>145</price>
+                <inStock>true</inStock>
+            </product>
+            <product>
+                <producer>Horizont</producer>
+                <model>H323-2332</model>
+                <dateOfIssue>12-12-2013</dateOfIssue>
+                <color>Black</color>
+                <price>100</price>
+                <inStock>false</inStock>
+            </product>
+        </subcategory>
+        <subcategory name="CRT">
+            <product>
+                <producer>LG</producer>
+                <model>L44-566</model>
+                <dateOfIssue>12-11-2013</dateOfIssue>
+                <color>White</color>
+                <price>220</price>
+                <inStock>true</inStock>
+            </product>
+            <product>
+                <producer>Samsung</producer>
+                <model>S29-36</model>
+                <dateOfIssue>12-11-2013</dateOfIssue>
+                <color>White</color>
+                <price>360</price>
+                <inStock>true</inStock>
+            </product>
+            <product>
+                <producer>Horizont</producer>
+                <model>H34-R5</model>
+                <dateOfIssue>12-11-2013</dateOfIssue>
+                <color>White</color>
+                <price>80</price>
+                <inStock>true</inStock>
+            </product>
+        </subcategory>
+        <subcategory name="PDP">
+            <product>
+                <producer>Philips</producer>
+                <model>p4425</model>
+                <dateOfIssue>12-11-2013</dateOfIssue>
+                <color>Red</color>
+                <price>340</price>
+                <inStock>true</inStock>
+            </product>
+        </subcategory>
+    </category>
+    <category name="Keyboard">
+        <subcategory name="Wired">
+            <product>
+                <producer>Logitech</producer>
+                <model>K120</model>
+                <dateOfIssue>10-10-2012</dateOfIssue>
+                <color>Black</color>
+                <price>15</price>
+                <inStock>false</inStock>
+            </product>
+        </subcategory>
+        <subcategory name="Wireless">
+            <product>
+                <producer>Logitech</producer>
+                <model>L330</model>
+                <dateOfIssue>10-10-2013</dateOfIssue>
+                <color>Black</color>
+                <price>35</price>
+                <inStock>true</inStock>
+            </product>
+        </subcategory>
+    </category>
+    <category name="Mouse">
+        <subcategory name="Wired">
+            <product>
+                <producer>Logitech</producer>
+                <model>LW321-231</model>
+                <dateOfIssue>10-10-2012</dateOfIssue>
+                <color>Black</color>
+                <price>30</price>
+                <inStock>true</inStock>
+            </product>
+        </subcategory>
+        <subcategory name="Wireless">
+            <product>
+                <producer>Logitech</producer>
+                <model>LL-s34</model>
+                <dateOfIssue>10-10-2013</dateOfIssue>
+                <color>Red</color>
+                <price>50</price>
+                <inStock>true</inStock>
+            </product>
+        </subcategory>
+    </category>
+</shop>

@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+.container {
+    position: absolute;
+    display: inline-block;
+    width: 500px;
+    border-radius: 5px;
+    border: 2px solid #7D73B5;
+    background-color: #ffffff;
+    padding: 2px 15px 2px 15px;
+    margin: 5px;
+}
+
+.input-block {
+    clear: both;
+    text-align: left;
+}
+
+.inner-block {
+    float: left;
+    width: 500px;
+}
+
+.name-label {
+    float: left;
+    width: 100px;
+}
+
+.error-label {
+    width: 200px;
+    color: red;
+}
+
+.cancel-btn {
+    display: inline-block;
+    float: right;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 2px solid #7D73B5;
+    background-color: #ffffff;
+    padding: 2px 15px 2px 15px;
+    margin: 5px;
+    cursor: hand;
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #7D73B5;
+    padding: 2px;
+}
+
+.btn-container {
+    display: inline;
+    width: 200px;
+    height: 200px;
+}
+
+table,th,td {
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    padding: 2px;
+}
+
+th {
+    height: 28px;
+    background-color: #CDC4FF;
+    color: white;
+    border-color: black;
+}
+
+.right {
+    float: left;
+}
+
+.left {
+    float: left;
+}
+
+hr {
+    color: #CDC4FF;
+    height: 1px;
+    border: 0;
+    margin-bottom: 15px;
+    background: #CDC4FF;
+}
