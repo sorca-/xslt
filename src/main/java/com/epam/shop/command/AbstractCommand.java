@@ -3,6 +3,7 @@ package com.epam.shop.command;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Transformer;
 import java.io.IOException;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -19,4 +20,10 @@ public abstract class AbstractCommand {
 
     public abstract void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
 
+    protected void pushParamsFromRequest(HttpServletRequest request, Transformer transformer, String... paramNames) {
+        for (String paramName : paramNames) {
+            String param = request.getParameter(paramName);
+            transformer.setParameter(paramName, param);
+        }
+    }
 }

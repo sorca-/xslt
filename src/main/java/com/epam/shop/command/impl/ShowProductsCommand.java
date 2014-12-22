@@ -49,15 +49,12 @@ public final class ShowProductsCommand extends AbstractCommand {
 
         String xslProducts = RealPathListener.getRealPath() + ShopConstant.XSL_PRODUCTS;
         TransformerManager transformerManager = TransformerManager.getInstance();
-        String category = request.getParameter(PARAM_CATEGORY);
-        String subcategory = request.getParameter(PARAM_SUBCATEGORY);
 
         try (PrintWriter writer = response.getWriter()) {
             readLock.lock();
             LOGGER.debug("Locking read lock.");
             Transformer transformer = transformerManager.getTransformer(xslProducts);
-            transformer.setParameter(PARAM_CATEGORY, category);
-            transformer.setParameter(PARAM_SUBCATEGORY, subcategory);
+            pushParamsFromRequest(request, transformer,PARAM_CATEGORY, PARAM_SUBCATEGORY);
             transformerManager.transform(transformer, writer);
         } catch (TransformerException e) {
             LOGGER.error("TransformerException.", e);

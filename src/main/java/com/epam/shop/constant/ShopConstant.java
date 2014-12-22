@@ -19,6 +19,9 @@ public final class ShopConstant {
 
     /** The Constant COMMAND_PARAM_SHOW_PRODUCTS. */
     public static final String COMMAND_PARAM_SHOW_PRODUCTS = "showProducts";
+    public static final String UTF8 = "UTF-8";
+    public static final String PRODUCT = "product";
+
 
     /** The Constant COMMAND_PARAM_CREATE_PRODUCT. */
 //    public static final String COMMAND_PARAM_CREATE_PRODUCT = "createProduct";
@@ -52,6 +55,9 @@ public final class ShopConstant {
 
     /** The Constant PARAM_IN_STOCK. */
     public static final String PARAM_IN_STOCK = "inStock";
+
+    public static final String PARAM_VALIDATOR = "validator";
+
 
     /** The Constant PARAM_ON. */
     public static final String PARAM_ON = "on";

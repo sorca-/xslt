@@ -2,6 +2,7 @@ package com.epam.shop.command.impl;
 
 import com.epam.shop.command.AbstractCommand;
 import com.epam.shop.constant.ShopConstant;
+import com.epam.shop.entities.Product;
 import com.epam.shop.util.TransformerManager;
 import org.apache.log4j.Logger;
 
@@ -30,17 +31,30 @@ public final class ShowFormOfAdditionCommand extends AbstractCommand {
             throws IOException, ServletException {
 
         String xslAddProduct = request.getServletContext().getRealPath(ShopConstant.XSL_ADD_PRODUCT);
-        String category = request.getParameter(PARAM_CATEGORY);
-        String subcategory = request.getParameter(PARAM_SUBCATEGORY);
         TransformerManager transformerManager = TransformerManager.getInstance();
 
         try (PrintWriter writer = response.getWriter()) {
             Transformer transformer = transformerManager.getTransformer(xslAddProduct);
-            transformer.setParameter(PARAM_CATEGORY, category);
-            transformer.setParameter(PARAM_SUBCATEGORY, subcategory);
+            Product product = getProduct(request);
+            transformer.setParameter("product", product);
+            LOGGER.debug("Locking read lock.");
+            readLock.lock();
             transformerManager.transform(transformer, writer);
         } catch (TransformerException e) {
             LOGGER.error("TransformerException.", e);
+        } finally {
+            readLock.unlock();
+            LOGGER.debug("Unlocking read lock.");
         }
+    }
+
+    private Product getProduct (HttpServletRequest request) {
+        Product product = (Product)request.getAttribute("product");
+        if (product == null) {
+            product = new Product();
+            product.setCategory(request.getParameter(PARAM_CATEGORY));
+            product.setSubcategory(request.getParameter(PARAM_SUBCATEGORY));
+        }
+        return product;
     }
 }
